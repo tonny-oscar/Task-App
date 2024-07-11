@@ -10,22 +10,51 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <section class="h-screen pt-20">
+    <section class="h-screen pt-10">
         <div class="w-[800px] m-auto">
-            
-            <h1 class="text-3xl font-black">Todos</h1>
-            <br>
-            <!--container for incomplete task-->
-            <div>
-                <span class="material-icons">add</span>
-                <button class="border w-full p-4 flex gap-4 rounded-lg hover:border-black">Add New Task</button>
-            </div>
-            <!--container for complete task-->
-            <div>
-                <h1>Completed task</h1>
-                <div></div>
+                
+                <h1 class="text-4xl font-black">Todos</h1>
+                <br>
+                <!--container for incomplete task-->
+                <div>
+                    <span class="material-icons cursor-pointer">add</span>
+                    <button class="border w-full p-4 flex gap-4 rounded-lg hover:border-black text-gray-500 hover:border-black">Add New Task</button>
+                </div>
+                <div class="flex flex-col devide-y">
+                    <div class="flex item-centre justify-between p-4 hover:bg-gray-100 rounded md">
+                        <div class="flex flex item-centre gap-4">
+                            <input type="checkbox" class="size-4 accent-black">
+                            <p class="text-lg">Aply basic styling</p>
+                        </div>
+                        <div>
+                            <span class="material-icons cursor-pointer">delete</span>
+                        </div>
+                    </div>
+                </div>
+                <!--container for complete task-->
+            <div class="margin top-20">
+                    <h1 class="font-bold">Completed task</h1>
+                    <div  class="flex flex-col devide-y">
+                        <input type="checkbox" class="size-4 accent-black">
+                        <p class="text-lg line-through">Aply basic styling</p>
+                    </div>
+                    <div>
+                        <span class="material-icons cursor-pointer">delete</span>
+                    </div>
             </div>
         </div>
+    </section>
+    <section class="w-full h-screen bg-gray-400/50 fixed top-0">
+        <div class="bg-white w[800px] m-auto mt-16 rounded-md p-6"></div>
+        <h1 class="text-xl font-bold mb-4">New task</h1>
+        <div class="flex flex-col gap-1 mb-5">
+            <label for="input">Task title</label>
+            <input name="input" type="text" placeholder="enter title of task" class="p-2 border">
+        </div>
+        <dIv>
+            <button>cancel</button>
+            <button class="bg-black text-white py-2 px-4 rounded-md">create task</button>
+        </dIv>
     </section>
 </body>
 </html>
